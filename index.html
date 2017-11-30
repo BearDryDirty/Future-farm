@@ -130,7 +130,7 @@ html, body {
         </div>
     </div>
     <div class="fixed-nav">
-      <span><img src="images/icon-share.png"></span>
+      <!-- <span><img src="images/icon-share.png"></span> -->
       <span onclick="edit()"><img src="images/icon-mes.png"></span>
       <span onclick="copyLink()"><img src="images/icon-link.png"></span>
       <a href="javascript:void(0)" onclick="pay()">参与互助</a>
@@ -156,9 +156,16 @@ html, body {
             <span>背书成功</span>
         </div>
     </div>
-    <input class="copy-link" type="hidden" value="">
+    <div class="none" id="copy" onclick="closecopypop()">
+        <div class="pop-alert">
+            <p></p>
+            <span>复制成功</span>
+        </div>
+    </div>
+    <input class="copy-link" type="text" value="">
 <div class="empty"></div>
 <div class="cover" onclick="close_pop()"></div>
+
 </div>
 </body>
 <script src="js/jquery-1.8.3.min.js"></script>
@@ -174,14 +181,14 @@ var swiper = new Swiper('.swiper-container', {
 });
 </script>
 <script>
-    var cover = document.getElementById('pop');
-    function pop(){
-        cover.setAttribute("class","");
-        setTimeout("closepop()",1000);
-    };
-    function closepop(){
-        cover.setAttribute("class","none");
-    }
+var cover = document.getElementById('pop');
+function pop(){
+    cover.setAttribute("class","");
+    setTimeout("closepop()",1000);
+};
+function closepop(){
+    cover.setAttribute("class","none");
+}
 
     $('.tab-nav span').click(function() {
         var i = $(this).index();
@@ -224,11 +231,18 @@ var swiper = new Swiper('.swiper-container', {
 </script>
 
 <script>
+
+var cover1 = document.getElementById('copy');
 function copyLink () {
     var link = window.location.href;
     $(".copy-link").val(link);
     $(".copy-link").select(); //选择对象
-    document.execCommand("Copy","false",null); //执行浏览器复制命令
+    document.execCommand("Copy"); //执行浏览器复制命令
+        cover1.setAttribute("class","");
+        setTimeout("closecopypop()",1000);
+}
+function closecopypop(){
+    cover1.setAttribute("class","none");
 }
 </script>
 </html>

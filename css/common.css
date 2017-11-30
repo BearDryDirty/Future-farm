@@ -56,7 +56,7 @@ input {-webkit-appearance:none;}
 .fixed-nav{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#fff; z-index:9; border-top: 1px solid #ddd; text-align: left}
 .fixed-nav span{width: 20%; height: 50px;display: block; float: left; text-align: center;}
 .fixed-nav span img{height: 24px; width: auto; margin: 13px 0 0 0}
-.fixed-nav a{width: 40%; height: 50px;display: block; float: right; background: #B72A2B; line-height: 50px; text-align: center; color: #fff}
+.fixed-nav a{width: 60%; height: 50px;display: block; float: right; background: #B72A2B; line-height: 50px; text-align: center; color: #fff}
 
 .edit-mes,.pay{width: 94%; height: auto; position: fixed; top: 50%; left: 3%; z-index: 25;background: #fff}
 .pay{padding-top: 3%}
@@ -65,9 +65,9 @@ input {-webkit-appearance:none;}
 .pop-btn{width: 100%; height: 50px; background: #259B24; color: #fff; font-size: 1.2em}
 .pop-inp{width: 80%; height: 30px; border: 1px solid #ddd; margin-top: 3%; text-indent: 1em}
 
-.copy-link{width: 1px; height: 0px; border: 0; }
+.copy-link{width: 1px; height: 0px; border: 0;position:fixed; bottom:0; left:0; z-index: 1}
 
-#pop{width: 100%; height: 100%; position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 999;background:rgba(0,0,0,.6)}
+#pop,#copy{width: 100%; height: 100%; position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 999;background:rgba(0,0,0,.6)}
 .pop-alert{width: 160px; height: 160px; position: absolute; top: 50%; left: 50%; margin: -80px 0 0 -80px; background: #fff; border-radius: 20px}
 .pop-alert p{font-size: 20px; height: 60px; width: 60px; margin:40px 0 0 50px}
 .pop-alert span{height:30px; line-height: 30px}
